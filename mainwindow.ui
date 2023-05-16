@@ -93,7 +93,7 @@
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionNew">
    <property name="icon">
-    <iconset>
+    <iconset resource="resource.qrc">
      <normaloff>:/images/Icons/New.bmp</normaloff>:/images/Icons/New.bmp</iconset>
    </property>
    <property name="text">
@@ -102,7 +102,7 @@
   </action>
   <action name="actionOpen">
    <property name="icon">
-    <iconset>
+    <iconset resource="resource.qrc">
      <normaloff>:/images/Icons/Open.bmp</normaloff>:/images/Icons/Open.bmp</iconset>
    </property>
    <property name="text">
@@ -111,7 +111,7 @@
   </action>
   <action name="actionSave_as">
    <property name="icon">
-    <iconset>
+    <iconset resource="resource.qrc">
      <normaloff>:/images/Icons/Save.bmp</normaloff>:/images/Icons/Save.bmp</iconset>
    </property>
    <property name="text">
@@ -120,7 +120,7 @@
   </action>
   <action name="actionPrint">
    <property name="icon">
-    <iconset>
+    <iconset resource="resource.qrc">
      <normaloff>:/images/Icons/print.png</normaloff>:/images/Icons/print.png</iconset>
    </property>
    <property name="text">
@@ -129,7 +129,7 @@
   </action>
   <action name="actionExit">
    <property name="icon">
-    <iconset>
+    <iconset resource="resource.qrc">
      <normaloff>:/images/Icons/exit.png</normaloff>:/images/Icons/exit.png</iconset>
    </property>
    <property name="text">
@@ -138,8 +138,8 @@
   </action>
   <action name="actionCopy">
    <property name="icon">
-    <iconset>
-     <normaloff>Icons/Copy.bmp</normaloff>Icons/Copy.bmp</iconset>
+    <iconset resource="resource.qrc">
+     <normaloff>:/images/Icons/Copy.bmp</normaloff>:/images/Icons/Copy.bmp</iconset>
    </property>
    <property name="text">
     <string>Copy</string>
@@ -147,8 +147,8 @@
   </action>
   <action name="actionPaste">
    <property name="icon">
-    <iconset>
-     <normaloff>Icons/Paste.bmp</normaloff>Icons/Paste.bmp</iconset>
+    <iconset resource="resource.qrc">
+     <normaloff>:/images/Icons/Paste.bmp</normaloff>:/images/Icons/Paste.bmp</iconset>
    </property>
    <property name="text">
     <string>Paste</string>
@@ -156,8 +156,8 @@
   </action>
   <action name="actionCut">
    <property name="icon">
-    <iconset>
-     <normaloff>Icons/Cut.bmp</normaloff>Icons/Cut.bmp</iconset>
+    <iconset resource="resource.qrc">
+     <normaloff>:/images/Icons/Cut.bmp</normaloff>:/images/Icons/Cut.bmp</iconset>
    </property>
    <property name="text">
     <string>Cut</string>
@@ -165,7 +165,7 @@
   </action>
   <action name="actionUndo">
    <property name="icon">
-    <iconset>
+    <iconset resource="resource.qrc">
      <normaloff>:/images/Icons/undo.png</normaloff>:/images/Icons/undo.png</iconset>
    </property>
    <property name="text">
@@ -174,7 +174,7 @@
   </action>
   <action name="actionRedo">
    <property name="icon">
-    <iconset>
+    <iconset resource="resource.qrc">
      <normaloff>:/images/Icons/redo.png</normaloff>:/images/Icons/redo.png</iconset>
    </property>
    <property name="text">
@@ -193,6 +193,8 @@
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
  <connections/>
 </ui>
