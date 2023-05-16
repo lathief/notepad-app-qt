@@ -6,28 +6,32 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>477</width>
-    <height>387</height>
+    <width>1366</width>
+    <height>768</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QWidget" name="verticalLayoutWidget">
+   <widget class="QTextEdit" name="textEdit">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>0</y>
-      <width>461</width>
-      <height>301</height>
+      <y>10</y>
+      <width>791</width>
+      <height>501</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <widget class="QTextEdit" name="textEdit"/>
-     </item>
-    </layout>
+    <property name="sizeAdjustPolicy">
+     <enum>QAbstractScrollArea::AdjustToContents</enum>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -35,7 +39,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>477</width>
+     <width>1366</width>
      <height>22</height>
     </rect>
    </property>
@@ -59,8 +63,16 @@
     <addaction name="actionUndo"/>
     <addaction name="actionRedo"/>
    </widget>
+   <widget class="QMenu" name="menuFont">
+    <property name="title">
+     <string>Option</string>
+    </property>
+    <addaction name="actionChange_Font"/>
+    <addaction name="actionAbout_Me"/>
+   </widget>
    <addaction name="menuFile"/>
    <addaction name="menuEdit"/>
+   <addaction name="menuFont"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -72,11 +84,16 @@
    <addaction name="actionNew"/>
    <addaction name="actionOpen"/>
    <addaction name="actionSave_as"/>
+   <addaction name="actionCopy"/>
+   <addaction name="actionPaste"/>
+   <addaction name="actionCut"/>
+   <addaction name="actionUndo"/>
+   <addaction name="actionRedo"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionNew">
    <property name="icon">
-    <iconset resource="resource.qrc">
+    <iconset>
      <normaloff>:/images/Icons/New.bmp</normaloff>:/images/Icons/New.bmp</iconset>
    </property>
    <property name="text">
@@ -85,7 +102,7 @@
   </action>
   <action name="actionOpen">
    <property name="icon">
-    <iconset resource="resource.qrc">
+    <iconset>
      <normaloff>:/images/Icons/Open.bmp</normaloff>:/images/Icons/Open.bmp</iconset>
    </property>
    <property name="text">
@@ -94,7 +111,7 @@
   </action>
   <action name="actionSave_as">
    <property name="icon">
-    <iconset resource="resource.qrc">
+    <iconset>
      <normaloff>:/images/Icons/Save.bmp</normaloff>:/images/Icons/Save.bmp</iconset>
    </property>
    <property name="text">
@@ -103,7 +120,7 @@
   </action>
   <action name="actionPrint">
    <property name="icon">
-    <iconset resource="resource.qrc">
+    <iconset>
      <normaloff>:/images/Icons/print.png</normaloff>:/images/Icons/print.png</iconset>
    </property>
    <property name="text">
@@ -112,7 +129,7 @@
   </action>
   <action name="actionExit">
    <property name="icon">
-    <iconset resource="resource.qrc">
+    <iconset>
      <normaloff>:/images/Icons/exit.png</normaloff>:/images/Icons/exit.png</iconset>
    </property>
    <property name="text">
@@ -121,8 +138,8 @@
   </action>
   <action name="actionCopy">
    <property name="icon">
-    <iconset resource="resource.qrc">
-     <normaloff>:/images/Icons/Copy.bmp</normaloff>:/images/Icons/Copy.bmp</iconset>
+    <iconset>
+     <normaloff>Icons/Copy.bmp</normaloff>Icons/Copy.bmp</iconset>
    </property>
    <property name="text">
     <string>Copy</string>
@@ -130,8 +147,8 @@
   </action>
   <action name="actionPaste">
    <property name="icon">
-    <iconset resource="resource.qrc">
-     <normaloff>:/images/Icons/Paste.bmp</normaloff>:/images/Icons/Paste.bmp</iconset>
+    <iconset>
+     <normaloff>Icons/Paste.bmp</normaloff>Icons/Paste.bmp</iconset>
    </property>
    <property name="text">
     <string>Paste</string>
@@ -139,8 +156,8 @@
   </action>
   <action name="actionCut">
    <property name="icon">
-    <iconset resource="resource.qrc">
-     <normaloff>:/images/Icons/Cut.bmp</normaloff>:/images/Icons/Cut.bmp</iconset>
+    <iconset>
+     <normaloff>Icons/Cut.bmp</normaloff>Icons/Cut.bmp</iconset>
    </property>
    <property name="text">
     <string>Cut</string>
@@ -148,7 +165,7 @@
   </action>
   <action name="actionUndo">
    <property name="icon">
-    <iconset resource="resource.qrc">
+    <iconset>
      <normaloff>:/images/Icons/undo.png</normaloff>:/images/Icons/undo.png</iconset>
    </property>
    <property name="text">
@@ -157,17 +174,25 @@
   </action>
   <action name="actionRedo">
    <property name="icon">
-    <iconset resource="resource.qrc">
+    <iconset>
      <normaloff>:/images/Icons/redo.png</normaloff>:/images/Icons/redo.png</iconset>
    </property>
    <property name="text">
     <string>Redo</string>
    </property>
   </action>
+  <action name="actionChange_Font">
+   <property name="text">
+    <string>Font</string>
+   </property>
+  </action>
+  <action name="actionAbout_Me">
+   <property name="text">
+    <string>About Me</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources>
-  <include location="resource.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
