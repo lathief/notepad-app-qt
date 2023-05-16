@@ -6,6 +6,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    QFont font("Ubuntu Reguler");
+    font.setWeight(QFont::Normal);
+    QApplication::setFont(font);
     this->setCentralWidget(ui->textEdit);
 }
 
